@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block content %}
+<div class="bg-auto bg-no-repeat bg-center h-screen" style="background-image: url('../static/images/Hero.jpg')">
+    <main class="pt-52 mx-auto max-w-7xl px-4">
+        <h1 class="text-4xl text-center font-bold text-white sm:text-5xl md:text-6xl">
+            Salary Prediction Application
+        </h1>
+        <p
+            class="mt-3 text-center text-base text-gray-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl">
+            Search for your future salary
+        </p>
+        <div class="mt-8 flex justify-center">
+            <div class="rounded-full shadow">
+                <a href="#form"
+                    class="px-12 py-4 text-base font-medium rounded-full text-white bg-green-400 hover:bg-green-500 text-lg">
+                    Get started
+                </a>
+            </div>
+        </div>
+    </main>
+</div>
+<div class="py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <h4 class="text-4xl text-center font-bold text-gray-100 mb-14">
+        Predict Your Salary
+    </h4>
+    {% include "includes/form.html" %}
+</div>
+{% endblock %}

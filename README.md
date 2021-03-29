@@ -1,1 +1,1 @@
-sepmproject
+# Salary Prediction Application
