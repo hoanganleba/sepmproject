@@ -1,0 +1,19 @@
+{
+  "name": "sepmproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hoanganleba/sepmproject.git",
+  "author": "hoanganleba <hoanganleba>",
+  "license": "MIT",
+  "scripts": {
+    "build:css": "postcss tailwind.css -o style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^4.1.10",
+    "install": "^0.13.0",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
+  }
+}
