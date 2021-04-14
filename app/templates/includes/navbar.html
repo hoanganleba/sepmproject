@@ -1,5 +1,5 @@
-<nav id="navbar" class="w-full py-2 animate__animated animate__faster"
-    :class="{'bg-black fixed animate__slideInDown': !scrolAtTop, 'absolute bg-transparent': scrolAtTop}"
+<nav class="w-full sm:py-2 animate__animated animate__faster"
+    :class="{'bg-white shadow fixed animate__slideInDown': !scrolAtTop, 'absolute bg-transparent': scrolAtTop}"
     x-data="{ isOpen: false, scrolAtTop: true}" @keydown.escape="isOpen = false"
     @scroll.window="scrolAtTop = (window.pageYOffset > 100) ? false : true">
     <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -7,7 +7,7 @@
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 <!-- Mobile menu button-->
                 <button @click="isOpen = !isOpen" type="button"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-indigo-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -24,16 +24,14 @@
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="text-gray-100 font-bold text-2xl">Triology</div>
+                    <img class="block h-10 w-auto"
+                        src="../static/images/workflow-mark-indigo-500.svg" alt="Workflow">
+                    <div class="hidden sm:block text-xl text-gray-800 font-medium ml-2">Triology</div>
                 </div>
                 <div class="hidden sm:block sm:ml-8">
-                    <div class="flex space-x-4">
-                        <div class="border-b-2 border-green-400 px-4 py-3">
-                            <a class="text-gray-100 rounded-md font-medium">Home</a>
-                        </div>
-                        <div class="px-4 py-3">
-                            <a class="text-gray-300 rounded-md font-medium">Team</a>
-                        </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="#" class="bg-indigo-600 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#" class="text-gray-300 hover:bg-indigo-400 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
                     </div>
                 </div>
             </div>
@@ -41,10 +39,10 @@
     </div>
 
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="bg-black mx-2 rounded" :class="{ 'block': isOpen, 'hidden': !isOpen }" id="mobile-menu" @click.away="isOpen = false"
-        x-show.transition="true">
+    <div class="bg-white mx-2" :class="{ 'block': isOpen, 'hidden': !isOpen }" id="mobile-menu"
+        @click.away="isOpen = false" x-show.transition="true">
         <div class="px-2 pt-2 pb-3 space-y-1">
-            <a href="#" class="bg-green-500 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="#" class="bg-indigo-600 text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
             <a href="#" class="text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Team</a>
         </div>
     </div>
